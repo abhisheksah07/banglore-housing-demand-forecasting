@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: bangalore-housing-api
+    env: python
+    buildCommand: ""
+    startCommand: python server/server.py
+    runtime: python
+    region: oregon
+    plan: free
