@@ -129,7 +129,7 @@
   <script>
     async function loadLocations() {
       try {
-        const res = await fetch('http://127.0.0.1:5000/get_location_names');
+        const res = await fetch('https://banglore-housing-demand-forecasting.onrender.com/get_location_names');
         const data = await res.json();
         const locations = data.locations;
         const locDropdown = document.getElementById("locations");
@@ -169,7 +169,7 @@
       }
 
       try {
-        const res = await fetch("http://127.0.0.1:5000/predict_price", {
+        const res = await fetch("https://banglore-housing-demand-forecasting.onrender.com/predict_price", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
