@@ -7,6 +7,7 @@ import os
 
 app = Flask(__name__)
 CORS(app)
+port = int(os.environ.get("PORT", 5000))
 
 # Define relative paths
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -62,4 +63,4 @@ def predict_price():
     return jsonify({'estimated_price': predicted_price})
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=port)
